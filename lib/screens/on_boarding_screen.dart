@@ -1,4 +1,5 @@
 import 'package:coffee_shop/screens/home_index.dart';
+import 'package:coffee_shop/screens/index.dart';
 import 'package:coffee_shop/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -70,7 +71,9 @@ class OnBoardingScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeIndex()),
+                          MaterialPageRoute(
+                            builder: (context) => IndexScreen(),
+                          ),
                         );
                       },
                       child: Text('Get Started'),

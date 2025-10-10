@@ -1,4 +1,5 @@
 import 'package:coffee_shop/theme/colors.dart';
+import 'package:coffee_shop/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeIndex extends StatefulWidget {
@@ -18,6 +19,38 @@ class _HomeIndexState extends State<HomeIndex> {
     'Nigeria',
   ];
   String selectedCoffeeType = 'All Coffee';
+  final List<Map<String, dynamic>> data = [
+    {
+      'image': 'Assets/Images/coffeeOne.png',
+      'title': 'coffee 1',
+      'price': 4.43,
+    },
+    {
+      'image': 'Assets/Images/coffeeFive.png',
+      'title': 'coffee 2',
+      'price': 3.43,
+    },
+    {
+      'image': 'Assets/Images/coffeeThree.png',
+      'title': 'coffee 3',
+      'price': 3.43,
+    },
+    {
+      'image': 'Assets/Images/coffeeFour.png',
+      'title': 'coffee 3',
+      'price': 24.43,
+    },
+    {
+      'image': 'Assets/Images/coffeeFive.png',
+      'title': 'coffee 3',
+      'price': 41.43,
+    },
+    {
+      'image': 'Assets/Images/coffeeSix.png',
+      'title': 'coffee 3',
+      'price': 14.42,
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -138,6 +171,31 @@ class _HomeIndexState extends State<HomeIndex> {
                                   ),
                                 )
                                 .toList(),
+                          ),
+                        ),
+                        SizedBox(height: 30),
+                        SizedBox(
+                          height: 270,
+                          width: 340,
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            children: [
+                              Wrap(
+                                direction: Axis.horizontal,
+                                spacing: 50,
+                                // runSpacing: 10,
+                                children: data
+                                    .map(
+                                      (e) => coffeeCard(
+                                        imageUrl: e['image'],
+                                        price: e['price'].toString(),
+                                        company: 'Regina',
+                                        title: e['title'],
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
+                            ],
                           ),
                         ),
                       ],
