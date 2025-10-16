@@ -1,5 +1,6 @@
 import 'package:coffee_shop/screens/detailsScreen.dart';
 import 'package:coffee_shop/screens/home_index.dart';
+import 'package:coffee_shop/screens/orders.dart';
 import 'package:coffee_shop/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class PlaceHolderClass extends StatelessWidget {
 const List<Widget> screens = [
   HomeIndex(),
   DetailsScreen(),
-  PlaceHolderClass(title: 'Orders'),
+  OrdersScreen(),
   PlaceHolderClass(title: 'Map'),
 ];
 int _currentIndex = 0;
