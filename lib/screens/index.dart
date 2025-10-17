@@ -1,5 +1,6 @@
 import 'package:coffee_shop/screens/detailsScreen.dart';
 import 'package:coffee_shop/screens/home_index.dart';
+import 'package:coffee_shop/screens/mapScreen.dart';
 import 'package:coffee_shop/screens/orders.dart';
 import 'package:coffee_shop/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -11,21 +12,11 @@ class IndexScreen extends StatefulWidget {
   State<IndexScreen> createState() => _IndexScreenState();
 }
 
-class PlaceHolderClass extends StatelessWidget {
-  final String title;
-  const PlaceHolderClass({required this.title, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text(title));
-  }
-}
-
 const List<Widget> screens = [
   HomeIndex(),
   DetailsScreen(),
   OrdersScreen(),
-  PlaceHolderClass(title: 'Map'),
+  MapScreen(),
 ];
 int _currentIndex = 0;
 
@@ -64,8 +55,8 @@ class _IndexScreenState extends State<IndexScreen> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications, color: Colors.black),
-            activeIcon: Icon(Icons.notifications, color: AppColor.primaryColor),
+            icon: Icon(Icons.map, color: Colors.black),
+            activeIcon: Icon(Icons.map, color: AppColor.primaryColor),
             label: "Home",
           ),
         ],
